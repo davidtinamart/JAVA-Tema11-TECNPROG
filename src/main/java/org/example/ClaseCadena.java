@@ -10,10 +10,9 @@ public class ClaseCadena {
 
     String[] nombres = nombreCompleto.trim().split("\s+");          //separa el nombre por espacios
 
-        for(int i = 0; i < nombres.length; i++){                            //recorre el array
-            String nombre = null;                                           //inicializamos la variable nombre
-            if(!nombre.isEmpty()){                                          //si el nombre no está vacío
-            iniciales = iniciales + nombre.charAt(0) + ".";                 //añade la primera letra del nombre y un punto
+        for(String nombre : nombres){                               //para cada nombre
+            if(!nombre.isEmpty()){                                     //si el nombre no está vacío
+                iniciales = iniciales +  nombre.charAt(0) + ".";      //añade la primera letra de cada nombre y un punto
         }
     }
         return iniciales.toUpperCase();                                     //devuelve las iniciales en Uppercase (mayus)
